@@ -106,13 +106,13 @@ app.use(
   );
 
 // use ether a IP limter (in Production), or use morgan logging
-if (process.env.NODE_ENV === 'production') app.use(require("./Whispersphere/middleware/limiter"));
+if (process.env.NODE_ENV === 'production') app.use(require("./WhisperSphere/middleware/limiter"));
   else app.use(morgan('dev'))
 
 // Whispersphere
-app.use("/whispersphere", require("./whispersphere/routes/index"))
-app.use("/whispersphere/auth", require("./whispersphere/routes/auth"))
-app.use("/whispersphere/room", require("./whispersphere/routes/room"))
+app.use("/whispersphere", require("./whisperSphere/routes/index"))
+app.use("/whispersphere/auth", require("./whisperSphere/routes/auth"))
+app.use("/whispersphere/room", require("./whisperSphere/routes/room"))
 
 // Blog API
 app.use("/blog-api/blog/", require("./Blog_api/routes/blog"))
