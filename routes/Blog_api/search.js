@@ -1,5 +1,5 @@
 const router = require("express").Router()
-const verify = require("../../middleware/Blog_api/verify")
+const verify = require("../../Middleware/Blog_api/verify")
 
 /**
  * Search post route. Login required. possible search params as query params are author and keywords.

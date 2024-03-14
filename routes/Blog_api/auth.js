@@ -1,6 +1,6 @@
 const router = require("express").Router()
-const pw = require("../../middleware/Blog_api/password")
-const verify = require("../../middleware/Blog_api/verify")
+const pw = require("../../Middleware/Blog_api/password")
+const verify = require("../../Middleware/Blog_api/verify")
 const jwt = require('jsonwebtoken')
 const validator = require('validator');
 

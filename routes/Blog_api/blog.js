@@ -1,5 +1,5 @@
 const router = require("express").Router()
-const verify = require("../../middleware/Blog_api/verify")
+const verify = require("../../Middleware/Blog_api/verify")
 
 /**
  * Get all posts from user route. Login required.
