@@ -110,9 +110,9 @@ if (process.env.NODE_ENV === 'production') app.use(require("./WhisperSphere/midd
   else app.use(morgan('dev'))
 
 // Whispersphere
-app.use("/whispersphere", require("./whisperSphere/routes/index"))
-app.use("/whispersphere/auth", require("./whisperSphere/routes/auth"))
-app.use("/whispersphere/room", require("./whisperSphere/routes/room"))
+app.use("/whispersphere", require("./WhisperSphere/routes/index"))
+app.use("/whispersphere/auth", require("./WhisperSphere/routes/auth"))
+app.use("/whispersphere/room", require("./WhisperSphere/routes/room"))
 
 // Blog API
 app.use("/blog-api/blog/", require("./Blog_api/routes/blog"))
