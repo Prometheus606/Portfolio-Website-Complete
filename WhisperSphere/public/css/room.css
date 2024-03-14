@@ -1,0 +1,190 @@
+.delete-room-btn {
+    margin-right: .5rem;
+    margin-top: .5rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    margin-bottom: 0px;
+    padding: 0px;
+    font-size: 2rem;
+    transition: color 0.3s ease;
+}
+
+.delete-room-btn:hover {
+    color: var(--btn-bg-color-danger);
+}
+
+.exit-door {
+    background-image: url("../images/exit-door.png");
+    width: 40px;
+    height: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 1rem;
+}
+
+.exit-door:hover {
+    width: 42px;
+    height: 42px;
+}
+
+.messages-container {
+    overflow-y: auto;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 2rem auto 5rem;
+}
+
+.message-box {
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    margin: 1rem auto;
+    background-color: var(--messagebox-bg-color-other);
+    min-width: 15rem;
+    max-width: 70%;
+    border-radius: 1rem;
+    box-shadow: -2px -2px 10px 0px var(--box-shadow-color);
+}
+
+.messages-self {
+    /* Diffrent Color for messages that user himself has send */
+    background-color: var(--messagebox-bg-color-self);
+}
+
+.message-header {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px;
+    padding: 0px;
+}
+
+.message-footer {
+    display: flex;
+    justify-content: end;
+    margin: 0 0 .3rem 0;
+    padding: 0px;
+}
+
+.delete-message-btn {
+    margin-right: .5rem;
+    margin-top: .5rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    margin-bottom: 0px;
+    padding: 0px;
+    font-size: .8rem;
+    transition: color 0.3s ease;
+}
+
+.delete-message-btn:hover {
+    color: var(--btn-bg-color-danger);
+}
+
+.message-username {
+    font-weight: bolder;
+    margin-left: .5rem;
+    margin-bottom: 0px;
+    padding: 0px;
+    font: var(--font-small);
+    font-weight: 900;
+    color: var(--fg-color-secondary);
+}
+
+.message-time {
+    font-weight: lighter;
+    font-style: italic;
+    margin-right: .5rem;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0px;
+    font: var(--font-small);
+    font-style: italic;
+    color: var(--fg-color-secondary);
+}
+
+.message-body {
+    display: block;
+    text-align: start;
+    margin: 0 .5rem;
+    overflow-wrap: break-word;
+    padding: 0px;
+    font: var(--font-regular);
+
+}
+
+.date-container {
+    width: fit-content;
+    padding: 0px 1rem;
+    background-color: var(--date-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    margin: 0 auto;
+    font: var(--font-regular);
+    box-shadow: -1px -1px 5px 0px var(--box-shadow-color);
+    color: var(--fg-color-secondary);
+    font-weight: 400;
+}
+
+.send-message-container {
+    position: fixed;
+    bottom: 1rem;
+    width: 100%;
+    text-align: center;
+}
+
+.send-message-form {
+    display: flex;
+}
+
+.send-message-container .text-input {
+    width: 100%;
+}
+
+/***************** Media Queries *********************/
+
+@media (max-width: 1200px) {
+    .room-header {
+        font-size: 40px;
+    }
+    .room-subheader {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .room-header {
+        font-size: 30px;
+    }
+    .room-subheader {
+        font-size: 15px;
+    }
+    .nav {
+        flex-direction: column-reverse;
+        align-items: flex-end;
+    }
+    .delete-room-btn {
+        margin: 0;
+        font-size: 1.5rem;
+    }
+    .exit-door {
+        width: 25px;
+        height: 25px;
+        margin-bottom: .5rem;
+    }
+    .exit-door:hover {
+        width: 27px;
+        height: 27px;
+    }
+    .messages-container {
+        width: 90%;
+        margin: 2rem auto 2rem;
+    }
+    .send-message-container .text-input {
+        width: 70%;
+    }
+}

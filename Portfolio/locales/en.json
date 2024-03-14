@@ -1,0 +1,158 @@
+{
+	"navBar": ["Home", "Qualification", "Portfolio", "Contact", "Skills"],
+	"title": "Webdeveloper",
+	"copyrightText": "2024 Niklas Beitler - Portfolio",
+    "location-text": "Location",
+	"location": "Bremen, Germany",
+	"pages": {
+		"home": {
+			"title": "About me",
+			"aboutText": "Welcome to my website! I'm Niklas, a trained machining mechanic with a passion for technology and innovation. Currently, I work as a developer for NX CAM postprocessors and dedicate my free time to intensive backend development. My expertise lies in full-stack development, focusing on backend systems. My technology stack includes JavaScript with Node.js, Python with Flask, SQL, PostgreSQL, and Git. Additionally, I enjoy developing automation solutions with Python or JavaScript to streamline workflows. For instance, I've created a VSCode extension that provides syntax highlighting, autocompletion, snippets, and more to efficiently develop postprocessors. If you'd like to get in touch, feel free to use my contact form. I'm always eager to collaborate and discuss exciting projects!",
+            "experience_text1": "Years",
+            "experience_text2": "experience",
+            "certifications_text1": "Completed",
+            "certifications_text2": "certifications",
+            "companies_text1": "companies",
+            "companies_text2": "worked",
+            "image": "./Portfolio/images/IMG_2451.jpg"
+		},
+		"contact": {
+            "title": "Contact me",
+			"subtitle": "Get in touch",
+            "name": "Name",
+            "email": "Email",
+			"subject": "Subject",
+            "message": "Message",
+			"submit": "Send Message",
+            "errorMessage1": "Not enough characters in the fields",
+            "errorMessage2": "An error occurred while sending.",
+            "successMessage": "Your request has been send."
+        },
+		"resume": {
+            "title": "Qualification",
+            "subtitle": "My personal journey",
+            "work": {
+                "title": "Work",
+                "path": [
+                    {
+                        "position": "Apprenticeship as a Machine operator",
+                        "company": "Mey & Andres GmbH",
+                        "timePeriod": "Sep. 2015 - Jan. 2019"
+                    },
+                    {
+                        "position": "Machine operator",
+                        "company": "Mey & Andres GmbH",
+                        "timePeriod": "Jan. 2019 - Apr. 2019"
+                    },
+                    {
+                        "position": "Machine operator",
+                        "company": "Vacutec GmbH",
+                        "timePeriod": "Apr. 2019 - Apr. 2023"
+                    },
+                    {
+                        "position": "Postprocessor Developer",
+                        "company": "d.u.h. Group GmbH",
+                        "timePeriod": "Apr. 2023 - Heute"
+                    }
+                ]
+
+            }
+
+        },
+        "portfolio": {
+            "title": "Portfolio",
+            "subtitle": "Most recent works",
+            "new_project_title": "You have a new project?",
+            "new_project_subtitle": "Contact me now and get discounts on your Web development projects.",
+            "demo_button_text": "Visit",
+            "projects": [
+                {
+                    "title": "Whisper Sphere",
+                    "description": "Anonymous chat rooms with state-of-the-art encryption to facilitate confidential and secure real-time communication.",
+                    "image": "/Portfolio/images/whisperSphere.png",
+                    "buttonAction": "/whispersphere/"
+                },
+                {
+                    "title": "Blog API",
+                    "description": "My Blog API streamlines blog post creation, management, and commenting. Securely stored on the server, your changes ensure seamless access to your blog content from anywhere.",
+                    "image": "/Portfolio/images/blogAPI.jpeg",
+                    "buttonAction": "https://documenter.getpostman.com/view/33503313/2sA2xiVWh5"
+                },
+                {
+                    "title": "Mybrary",
+                    "description": "Explore and organize your personal library with MyBrary, a user-friendly book database. Easily catalog, search, and manage your collection, all within MyBrary's intuitive interface",
+                    "image": "/Portfolio/images/mybrary.png",
+                    "buttonAction": "/mybrary/"
+                }
+            ]
+            
+        },
+        "skills": {
+            "title": "Skills",
+            "subtitle": "My technical level",
+            "tree": [
+                {
+                    "title": "Web Developer",
+                    "subtitle": "More than 2 years",
+                    "icon": "uil-server-connection",
+                    "skill": [
+                        {
+                            "title": "HTML / CSS",
+                            "value": "50"
+                        },
+                        {
+                            "title": "Javascript",
+                            "value": "90"
+                        },
+                        {
+                            "title": "Node.js",
+                            "value": "80"
+                        },
+                        {
+                            "title": "SQL",
+                            "value": "60"
+                        }
+                    ]
+                },
+                {
+                    "title": "Postprocessor Developer",
+                    "subtitle": "1 year",
+                    "icon": "uil-brackets-curly",
+                    "skill": [
+                        {
+                            "title": "Python",
+                            "value": "80"
+                        },
+                        {
+                            "title": "TCL",
+                            "value": "70"
+                        },
+                        {
+                            "title": "CAM",
+                            "value": "60"
+                        }
+                    ]
+                },
+                {
+                    "title": "Cutting Machine Operator",
+                    "subtitle": "8 years",
+                    "icon": "uil-building",
+                    "skill": [
+                        {
+                            "title": "CNC Programming",
+                            "value": "90"
+                        },
+                        {
+                            "title": "Mill",
+                            "value": "90"
+                        },
+                        {
+                            "title": "Turn",
+                            "value": "50"
+                        }
+                    ]
+                }
+            ]
+        }
+	}
+}

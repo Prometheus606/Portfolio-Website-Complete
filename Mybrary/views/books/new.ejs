@@ -1,0 +1,51 @@
+<%- include("../partial/header.ejs") %>
+<h2 class="page-header">New Book</h2>
+<%- include("../partial/errorMessage.ejs") %>
+
+<!-- <form action="/books" method="POST" enctype="multipart/form-data"> -->
+<form action="/mybrary/books" method="POST">
+    <div class="form-row">
+        <div class="form-item">
+            <label for="title">Title</label>
+            <input type="text" id="title" name="title" value="<%= book.title %>">
+        </div>
+        <div class="form-item">
+            <label for="author">Author</label>
+            <select  id="author" name="author">
+                <% authors.forEach(author => { %>
+                    <% if (author.id === book.author) { %>
+                        <option selected value="<%= author.id%>" label="<%= author.name%>"></option>
+                    <% } else { %>
+                        <option value="<%= author.id%>" label="<%= author.name%>"></option>
+                    <% } %>       
+                <% }) %>
+            </select>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-item">
+            <label for="publishDate">Publish Date</label>
+            <input type="date" id="publishDate" name="publishDate" value="<%= book.publishDate == null ? "" : book.publishDate.toISOString().split("T")[0] %>">
+        </div>
+        <div class="form-item">
+            <label for="pageCount">Page Count</label>
+            <input type="number" id="pageCount" name="pageCount" value="<%= book.pageCount %>">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-item form-item-no-grow">
+            <label for="cover">Cover</label>
+            <input type="file" id="cover" name="cover" class="book-cover filepond">
+        </div>
+        <div class="form-item">
+            <label for="description">Description</label>
+            <textarea name="description" id="description" cols="30" rows="10"><%= book.description %></textarea>
+        </div>
+    </div>
+
+    <div class="form-row button-row form-row-end">
+        <a class="danger-button button" href="/mybrary/books">Cancel</a>
+        <input class="button" type="submit" value="Create">    
+    </div>
+</form>
+<%- include("../partial/footer.ejs") %>

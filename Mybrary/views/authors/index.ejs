@@ -1,0 +1,28 @@
+<%- include("../partial/header.ejs") %>
+<h2 class="page-header">Search Authors</h2>
+<form action="/mybrary/authors" method="get">
+    <div class="form-row">
+        <div class="form-item">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" value="<%= searchOptions.name %>">
+        </div>
+    </div>
+    <div class="button-row form-row-end">
+        <input class="button" type="submit" value="Search">
+    </div>
+</form>
+<br>
+<% authors.forEach(author => { %>
+    <div class="author-row">
+        <div class="author-name"><%= author.name%></div>
+        <div class="button-row form-row-end">
+            <a class="button" href="/mybrary/authors/<%= author.id %>">View</a>
+            <a class="button" href="/mybrary/authors/<%= author.id %>/edit">Edit</a>
+            <form action="/mybrary/authors/<%= author.id %>?_method=DELETE" method="POST">
+                <button class="button danger-button" type="submit">Delete</button>
+            </form>
+        </div>
+    </div>
+
+<% }) %>
+<%- include("../partial/footer.ejs") %>

@@ -1,0 +1,27 @@
+<%- include("../partial/header.ejs") %>
+<h2 class="page-header"><%= book.title %></h2>
+<div class="book-details">
+    <div>
+        <div>
+            <img class="book-cover" src="<%= book.coverimagepath %>" alt="Book Cover">
+        </div>
+        <div class="book-details-button-grid">
+        <a class="button" href="/mybrary/books/<%= book.id %>/edit">Edit</a>
+            <form action="/mybrary/books/<%= book.id %>?_method=DELETE" method="POST">
+                <button class="button danger-button" type="submit">Delete</button>
+            </form>
+            <a class="button book-details-view-button" href="/mybrary/authors/<%= author.id %>">View Author</a>
+        </div>
+    </div>
+    <div class="book-details-grid">
+        <div class="book-details-label">Author:</div>
+        <div><%= author.name %></div>
+        <div class="book-details-label">Publish Date:</div>
+        <div><%= book.publishdate.toDateString() %></div>
+        <div class="book-details-label">Page Count:</div>
+        <div><%= book.pagecount %></div>
+        <div class="book-details-label">Description:</div>
+        <div><%= book.description %></div>
+    </div>
+</div>
+<%- include("../partial/footer.ejs") %>

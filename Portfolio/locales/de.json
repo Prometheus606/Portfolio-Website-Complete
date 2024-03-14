@@ -1,0 +1,158 @@
+{
+    "navBar": ["Startseite", "Lebenslauf", "Portfolio", "Kontakt", "Fähigkeiten"],
+    "title": "Webentwickler",
+    "copyrightText": "2024 Niklas Beitler - Portfolio",
+    "location-text": "Ort",
+    "location": "Bremen, Deutschland",
+    "pages": {
+        "home": {
+            "title": "Über mich",
+            "aboutText": "Willkommen auf meiner Website! Ich bin Niklas, ein gelernter Zerspanungsmechaniker mit einer Leidenschaft für Technik und Innovation. Aktuell arbeite ich als Entwickler für NX CAM Postprozessoren und beschäftige mich in meiner Freizeit intensiv mit der Backend-Entwicklung. Meine Expertise liegt in der Fullstack-Entwicklung, mit Fokus auf Backend-Systemen. Mein Technologie-Stack umfasst JavaScript mit Node.js, Python mit Flask, SQL, PostgreSQL und Git. Zusätzlich entwickle ich gerne Automatisierungslösungen mit Python oder JavaScript, um Arbeitsabläufe zu vereinfachen. Zum Beispiel habe ich eine VSCode-Erweiterung erstellt, die Syntax-Hervorhebung, Autovervollständigung, Snippets und vieles mehr bietet, um effizient Postprozessoren zu entwickeln. Wenn Sie mich kontaktieren möchten, nutzen Sie gerne mein Kontaktformular. Ich freue mich immer darauf, zu kooperieren und spannende Projekte zu besprechen!",      
+            "experience_text1": "Jahre",
+            "experience_text2": "erfahrung",
+            "certifications_text1": "Zertifizierungen",
+            "certifications_text2": "",
+            "companies_text1": "Firmen",
+            "companies_text2": "",
+            "image": "./Portfolio/images/IMG_2451.jpg"
+        },
+        "contact": {
+            "title": "Kontaktiere mich",
+            "subtitle": "Get in touch",
+            "name": "Name",
+            "email": "Email",
+            "subject": "Betreff",
+            "message": "Nachricht",
+            "submit": "Abschicken",
+            "errorMessage1": "Zu wenig Zeichen in den Feldern",
+            "errorMessage2": "Beim verschicken ist  ein fehler aufgetreten.",
+            "successMessage": "Ihre Anfrage wurde verschickt."
+        },
+        "resume": {
+            "title": "Lebenslauf",
+            "subtitle": "My personal journey",
+            "work": {
+                "title": "Berufserfahrung",
+                "path": [
+                    {
+                        "position": "Ausbildung zum Zerspanungs mechaniker",
+                        "company": "Mey & Andres GmbH",
+                        "timePeriod": "Sep. 2015 - Jan. 2019"
+                    },
+                    {
+                        "position": "Zerspanungs mechaniker",
+                        "company": "Mey & Andres GmbH",
+                        "timePeriod": "Jan. 2019 - Apr. 2019"
+                    },
+                    {
+                        "position": "Zerspanungs mechaniker",
+                        "company": "Vacutec GmbH",
+                        "timePeriod": "Apr. 2019 - Apr. 2023"
+                    },
+                    {
+                        "position": "Postprozessor Entwickler",
+                        "company": "d.u.h. Group GmbH",
+                        "timePeriod": "Apr. 2023 - Heute"
+                    }
+                ]
+
+            }
+
+        },
+        "portfolio": {
+            "title": "Portfolio",
+            "subtitle": "Most recent works",
+            "new_project_title": "Sie haben ein neues Projekt?",
+            "new_project_subtitle": "Kontaktieren Sie mich und erhalten Sie Rabatte auf Ihre Webentwicklungsprojekte.",
+            "demo_button_text": "Besuchen",
+            "projects": [
+                {
+                    "title": "Whisper Sphere",
+                    "description": "Anonyme Chaträume mit hochmoderner Verschlüsselung, um eine vertrauliche und sichere Kommunikation in Echtzeit zu ermöglichen.",
+                    "image": "../Portfolio/images/whisperSphere.png",
+                    "buttonAction": "/whispersphere/"
+                },
+                {
+                    "title": "Blog API",
+                    "description": "Meine Blog-API vereinfacht die Erstellung, Verwaltung und Kommentierung Ihrer Blogbeiträge. Alle Änderungen werden sicher auf dem Server gespeichert, so dass Sie von überall aus auf Ihre Blog-Inhalte zugreifen können.",
+                    "image": "../Portfolio/images/blogAPI.jpeg",
+                    "buttonAction": "https://documenter.getpostman.com/view/33503313/2sA2xiVWh5"
+                },
+                {
+                    "title": "MyBrary",
+                    "description": "Entdecke und organisiere deine persönliche Bibliothek mit MyBrary, einer benutzerfreundlichen Buchdatenbank. Katalogisiere, suche und verwalte deine Sammlung mühelos, alles innerhalb der intuitiven Benutzeroberfläche von MyBrary.",
+                    "image": "../Portfolio/images/mybrary.png",
+                    "buttonAction": "/mybrary/"
+                }
+            ]
+        },
+        "skills": {
+            "title": "Fähigkeiten",
+            "subtitle": "My technical level",
+            "tree": [
+                {
+                    "title": "Web Entwickler",
+                    "subtitle": "Über 2 Jahre",
+                    "icon": "uil-server-connection",
+                    "skill": [
+                        {
+                            "title": "HTML / CSS",
+                            "value": "50"
+                        },
+                        {
+                            "title": "Javascript",
+                            "value": "90"
+                        },
+                        {
+                            "title": "Node.js",
+                            "value": "80"
+                        },
+                        {
+                            "title": "SQL",
+                            "value": "60"
+                        }
+                    ]
+                },
+                {
+                    "title": "Postprocessor Entwickler",
+                    "subtitle": "1 Jahr",
+                    "icon": "uil-brackets-curly",
+                    "skill": [
+                        {
+                            "title": "Python",
+                            "value": "80"
+                        },
+                        {
+                            "title": "TCL",
+                            "value": "70"
+                        },
+                        {
+                            "title": "CAM",
+                            "value": "60"
+                        }
+                    ]
+                },
+                {
+                    "title": "Zerspanungsmechaniker",
+                    "subtitle": "8 Jahre",
+                    "icon": "uil-building",
+                    "skill": [
+                        {
+                            "title": "CNC Programmieren",
+                            "value": "90"
+                        },
+                        {
+                            "title": "Fräsen",
+                            "value": "90"
+                        },
+                        {
+                            "title": "Drehen",
+                            "value": "50"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+        
+}

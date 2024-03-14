@@ -1,0 +1,43 @@
+.newRoom-container {
+    margin: 15vh auto;
+    width: 50%;
+    text-align: center;
+    height: auto;
+    min-height: 15rem;
+    max-width: 800px;
+}
+
+.newRoom-container .error-text {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.room-details {
+    display: flex;
+    align-items: start;
+    justify-content: space-evenly;
+    flex-direction: column;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.room-detail-text {
+    font: var(--font-regular);
+    font-weight: 700;
+    font-size: 24px;
+}
+
+/***************** Media Queries *********************/
+
+@media (max-width: 730px) {
+    .newRoom-container {
+        width: 80%;
+    }
+}
+
+@media (max-width: 450px) {
+    .room-detail-text {
+        font-weight: 500;
+        font-size: 20px;
+    }
+}

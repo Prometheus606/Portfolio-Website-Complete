@@ -1,0 +1,15 @@
+<%- include("./partial/header.ejs") %>
+<h2 class="page-header">Recently Added</h2>
+<br>
+<div class="book-grid">
+    <% books.forEach(book => { %>
+        <div>
+            <a href="/books/<%= book.id %>">
+                <img class="book-cover" src="<%= book.coverimagepath %>" alt="Book Cover" height="150" width="100">
+            </a>         
+            <br>
+            <%= book.title %>
+        </div>
+    <% }) %>
+</div>
+<%- include("./partial/footer.ejs") %>

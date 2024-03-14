@@ -1,0 +1,62 @@
+<%- include("./layouts/header.ejs") %>
+<!--==================== CONTACT ME ====================-->
+<section class="contact section" id="contact">
+    <h2 class="section__title"><%= locals.__("pages").contact.title %></h2>
+    <span class="section__subtitle">Get in touch</span>
+
+    <% if (locals.message) { %>
+        <div>
+            <p id="user-info"> <%= message %> </p> 
+        </div>
+    <% } %>
+
+    <div class="contact__container container grid">
+        <div>
+            <!-- <i class="uil uil-phone-alt contact__icon"></i>
+            <i class="uil uil-envelope contact__icon"></i> -->
+
+            <div class="contact__information">
+                <i class="uil uil-map-marker contact__icon"></i>
+
+                <div>
+                    <h3 class="contact__title"><%= locals.__("location-text") %></h3>
+                    <span class="contatc__subtitle"><%= locals.__("location") %></span>
+                </div>
+            </div>
+        </div>
+
+        <form action="/contact/" method="POST" class="contact__form grid">
+            <div class="contact__inputs grid">
+                <div class="contact__content">
+                    <label for="" class="contact__label"><%= locals.__("pages").contact.name %></label>
+                    <input type="text" id="name" name="name" class="contact__input" required>
+                </div>
+
+                <div class="contact__content">
+                    <label for="" class="contact__label"><%= locals.__("pages").contact.email %></label>
+                    <input type="email"  id="email" name="email" class="contact__input" required>
+                </div>
+            </div>
+
+            <div class="contact__content">
+                <label for="" class="contact__label"><%= locals.__("pages").contact.subject %></label>
+                <input type="text"  id="subject" name="subject" class="contact__input" required>
+            </div>
+
+            <div class="contact__content">
+                <label for="" class="contact__label"><%= locals.__("pages").contact.message %></label>
+                <textarea name="message" id="message" cols="0" rows="7" class="contact__input"></textarea>
+            </div>
+
+            <div>
+                <button class="button button--flex" id="submit-button" type="submit">
+                    <a style="text-decoration: none; color: inherit;">
+                        <%= locals.__("pages").contact.submit %>
+                    </a>
+                    <i class="uil uil-message button__icon"></i>
+                </button>
+            </div>
+        </form>
+    </div>
+</section>
+<%- include("./layouts/footer.ejs") %>

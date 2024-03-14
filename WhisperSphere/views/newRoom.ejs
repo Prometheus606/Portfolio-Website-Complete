@@ -1,0 +1,16 @@
+<%- include("./partials/header") %>
+
+<h1>Created new Chat Room!</h1>
+<div class="newRoom-container">
+    <p class="error-text">Careful! The following Room ID and Password is required to login to the Chatroom. <br>This Information is not stored anywhere, please safe it somewhere.</p>
+    <div class="room-details">
+        <p class="room-detail-text">Room ID: <%= roomID %></p>
+        <p class="room-detail-text">Password: <%= password %></p>
+    </div>
+
+    <form action="/whispersphere" method="get" class="form">
+        <input type="submit" name="submit" value="Login" class="btn">
+    </form>
+</div>                          
+
+<%- include("./partials/footer") %>

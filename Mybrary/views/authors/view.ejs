@@ -1,0 +1,28 @@
+
+<%- include("../partial/header.ejs") %>
+<h2 class="page-header"><%= author.name %></h2>
+<div class="button-row">
+    <a href="/mybrary/authors/<%= author.id %>/edit" class="button">Edit</a>
+    <form action="/mybrary/authors/<%= author.id %>?_method=DELETE" method="POST">
+        <button class="button danger-button" type="submit">Delete</button>
+    </form>
+</div>
+<br>
+<% if (author.books.length > 0) { %>
+    <h2 class="page-header">Books by Author</h2>
+    <div class="book-grid">
+        <% author.books.forEach(book => { %>
+            <div>
+                <a href="/mybrary/books/<%= book.id %>">
+                    <img class="book-cover" src="<%= book.coverimagepath %>" alt="Book Cover">
+                </a>
+                <br>
+                <%= book.title %>
+            </div>
+        <% }) %>
+    </div>
+    
+<% } else { %>
+    <h2 class="page-header">Author have no Books</h2>
+<% } %>
+<%- include("../partial/footer.ejs") %>

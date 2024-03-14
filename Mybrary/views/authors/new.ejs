@@ -1,0 +1,16 @@
+<%- include("../partial/header.ejs") %>
+<h2 class="page-header">New Author</h2>
+<%- include("../partial/errorMessage.ejs") %>
+<form action="/mybrary/authors" method="post">
+    <div class="form-row">
+        <div class="form-item">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" value="<%= author.name %>">
+        </div>
+    </div>
+    <div class="form-row form-row-end button-row">
+        <a class="button danger-button" href="/mybrary/authors">Cancel</a>
+        <input class="button" type="submit" value="Create">
+    </div>
+</form>
+<%- include("../partial/footer.ejs") %>

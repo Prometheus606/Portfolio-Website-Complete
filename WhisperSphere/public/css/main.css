@@ -1,0 +1,144 @@
+@import url("./variables.css");
+@import url("./index.css");
+@import url("./newRoom.css");
+@import url("./room.css");
+@import url("./error.css");
+
+body {
+    background: var(--bg-color);
+    margin: 0px;
+    padding: 0px;
+    color: var(--fg-color-primary);
+    font: var(--font-regular);
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+.nav {
+    display: flex;
+    position: fixed;
+    top: .5rem;
+    right: .5rem;
+}
+
+h1 {
+    text-align: center;
+    font: var(--font-headers);
+    margin-top: 1rem;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+h3 {
+    text-align: center;
+    font: var(--font-headers);
+    margin: 0;
+    padding: 0;
+    font-size: 22px;
+}
+
+.error-text {
+    color: var(--error-text-color);
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color:var(--fg-color-primary);
+    text-align: center;  
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.text-input {
+    max-width: 25rem;
+    height: 2.5rem;
+    border: none;
+    border-radius: 1.5rem;
+    background-color: var(--text-input-color);
+    padding: 0 1rem;
+    font-size: 1rem;
+    color: #333;
+    box-shadow: 0 2px 4px var(--box-shadow-color);
+    transition: all 0.3s ease;
+    margin-bottom: 1rem;
+}
+
+.text-input:focus {
+    outline: none;
+    box-shadow: 0 4px 8px var(--box-shadow-color);
+    background-color: var(--text-input-color-focus);
+}
+
+.btn {
+    padding: .5rem 0rem;
+    min-width: 8rem;
+    border-radius: 999px;
+    font-size: 1.2rem;
+    background-color: var(--btn-bg-color);
+    color: var(--fg-color-primary);
+    border: none;
+    box-shadow: 0px 2px 4px var(--box-shadow-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font: var(--font-buttons);
+}
+
+.btn:hover {
+    box-shadow: 0px 4px 8px var(--box-shadow-color);
+    transform: translateY(-1px);
+    filter: brightness(130%);
+}
+
+.btn:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+.btn-danger {
+    background-color: var(--btn-bg-color-danger);
+}
+
+footer {
+    position: fixed;
+    right: .5rem;
+    bottom: 0px;
+}
+
+/***************** Scrollbar Styling *********************/
+
+/* Scroolbar arrow buttons */
+body::-webkit-scrollbar-button {
+    display: none;
+}
+
+/* scrollbar general*/
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Scrollbar foreground */
+body::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-color);
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: var(--scrollbar-color-hover);
+}
+
+/***************** Media Queries *********************/
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 340px) {
+    h1 {
+        font-size: 30px;
+    }
+}

@@ -1,0 +1,27 @@
+:root {
+
+    /* Color variables */
+    /* --bg-color: #12372A; */
+    --bg-color: linear-gradient(to right, #12372A, rgb(2, 43, 10));
+    --messagebox-bg-color-self: #3b9258;
+    --messagebox-bg-color-other: #436850;
+    --date-bg-color: #ADBC9F;
+    --btn-bg-color: rgb(94, 92, 92);
+    --btn-bg-color-danger: rgb(218, 89, 89);
+    --fg-color-primary: #FBFADA;
+    --fg-color-secondary: black;
+    --box-shadow-color: black;
+    --error-text-color: rgb(218, 89, 89);
+    --border-color: black;
+    --scrollbar-color: rgb(94, 92, 92);
+    --scrollbar-color-hover: rgb(151, 148, 148);
+    --text-input-color: #ADBC9F;
+    --text-input-color-focus: #FBFADA;
+
+    /* Font variables */
+    --font-headers: normal 500 60px Roboto, sans-serif;
+    --font-buttons: normal 300 20px Roboto, sans-serif;
+    --font-messages: normal 500 16px Roboto, sans-serif;
+    --font-regular: normal 300 16px Roboto, sans-serif;
+    --font-small: normal 300 12px Roboto, sans-serif;
+}

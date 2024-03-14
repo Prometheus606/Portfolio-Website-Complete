@@ -1,0 +1,50 @@
+:root {
+    --color-btn-border: black;
+    --color-btn-text: hsl(200, 100%, 20%);
+    --color-button-primery-background: hsl(200, 100%, 83%);
+    --color-button-primery-background-hover: hsl(200, 100%, 73%);
+    --color-button-danger-background: hsl(20, 100%, 83%);
+    --color-button-danger-background-hover: hsl(20, 100%, 73%);
+    --color-btn-danger-text: black;
+
+}
+
+.button-row {
+    display:flex;
+    align-items: flex-start;
+}
+
+.button-row > * {
+    margin-left: 1rem;
+}
+
+.button-row > *:first-child {
+    margin-left: 0;
+}
+
+.button {
+    text-decoration: none;
+    color: var(--color-btn-text);
+    background-color: var(--color-button-primery-background);
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--color-btn-border);
+    font-size: 1.2rem;
+    font-family: "gotham-Rounded";
+    cursor: pointer;
+    text-align: center;
+}
+
+.danger-button {
+    background-color: var(--color-button-danger-background);
+    color: var(--color-btn-danger-text);
+
+}
+
+.button:hover {
+    background-color: var(--color-button-primery-background-hover);
+}
+
+.danger-button:hover {
+    background-color: var(--color-button-danger-background-hover);
+}

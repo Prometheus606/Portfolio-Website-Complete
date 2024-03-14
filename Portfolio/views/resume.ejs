@@ -1,0 +1,99 @@
+<%- include("./layouts/header.ejs") %>
+    <!--==================== QUALIFICATION ====================-->
+    <section class="qualification__section">
+    <h2 class="section__title"><%= locals.__("pages").resume.title %></h2>
+    <span class="section__subtitle"><%= locals.__("pages").resume.subtitle %></span>
+
+    <div class="qualification__container container">
+        <div class="qualification__tabs">
+
+            <div class="qualification__button button--flex" data-target="#work">
+                <i class="uil uil-briefcase-alt qualification__icon"></i>
+                <%= locals.__("pages").resume.work.title %>
+            </div>
+        </div>
+
+        <div class="qualification__sections">
+    <!--==================== QUALIFICATION CONTENT 1 ====================-->
+    <div class="qualification__content qualification__active" data-content id="work">
+        <!--==================== QUALIFICATION 2 ====================--> 
+        <div class="qualification__data">
+            <div></div>
+            <div>
+                <span class="qualification__rounder"></span>
+                <span class="qualification__line"></span>
+            </div>
+
+            <div>
+                <h3 class="qualification__title"><%= locals.__("pages").resume.work.path[0].position %></h3>
+                <span class="qualification__subtitle"><%= locals.__("pages").resume.work.path[0].company %></span>
+                <div class="qualification__calendar">
+                    <i class="uil uil-calendar-alt"></i>
+                    <%= locals.__("pages").resume.work.path[0].timePeriod %>
+                </div>
+            </div>
+
+        </div> 
+
+        <div class="qualification__data">
+            <div>
+                <h3 class="qualification__title"><%= locals.__("pages").resume.work.path[1].position %></h3>
+                <span class="qualification__subtitle"><%= locals.__("pages").resume.work.path[1].company %></span>
+                <div class="qualification__calendar">
+                    <i class="uil uil-calendar-alt"></i>
+                    <%= locals.__("pages").resume.work.path[1].timePeriod %>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+            </div>
+
+            <div>
+                <span class="qualification__rounder"></span>
+                <span class="qualification__line"></span>
+            </div>
+        </div>
+        
+        <!--==================== QUALIFICATION 2 ====================--> 
+        <div class="qualification__data">
+            <div></div>
+            <div>
+                <span class="qualification__rounder"></span>
+                <span class="qualification__line"></span>
+            </div>
+
+            <div>
+                <h3 class="qualification__title"><%= locals.__("pages").resume.work.path[2].position %></h3>
+                <span class="qualification__subtitle"><%= locals.__("pages").resume.work.path[2].company %></span>
+                <div class="qualification__calendar">
+                    <i class="uil uil-calendar-alt"></i>
+                    <%= locals.__("pages").resume.work.path[2].timePeriod %>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+            </div>
+        </div> 
+
+        <!--==================== QUALIFICATION 3 ====================--> 
+        <div class="qualification__data">
+            <div>
+                <h3 class="qualification__title"><%= locals.__("pages").resume.work.path[3].position %></h3>
+                <span class="qualification__subtitle"><%= locals.__("pages").resume.work.path[3].company %></span>
+                <div class="qualification__calendar">
+                    <i class="uil uil-calendar-alt"></i>
+                    <%= locals.__("pages").resume.work.path[3].timePeriod %>
+                </div>
+            </div>
+
+            <div>
+                <span class="qualification__rounder"></span>
+            </div>
+        </div> 
+    
+        </div> 
+        
+        </div>
+    </div>
+</section>
+<%- include("./layouts/footer.ejs") %>

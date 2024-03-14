@@ -1,0 +1,48 @@
+<%- include("./partials/header") %>
+
+<h1>Whisper Sphere</h1>
+
+<% if (locals.generalError) { %>
+    <p class="error-text"><%= generalError %></p>
+<% } %>
+
+<div class="form-container">
+    <div class="join-container">
+        <h2>Join Room</h2>
+        <p>For Global Chat: ID and password 12345</p>
+
+       
+        <% if (locals.joinError) { %>
+            <p class="error-text"><%= joinError %></p>
+        <% } %>
+
+        <form action="/whispersphere/auth/login" method="post" class="form">
+            <div class="join-form">
+                <input type="text" name="userName" id="userName" placeholder="Enter nickname (optional)" class="text-input">
+                <input type="number" name="roomID" id="roomID" placeholder="Enter room ID" required class="text-input">
+                <input type="password" name="password" placeholder="Enter Password" required class="text-input">
+                <input type="submit" name="submit" value="Join" class="btn">
+            </div>
+        </form>
+    </div>
+    
+    <div class="create-container">
+        <h2>Create Room</h2>
+
+
+        <% if (locals.createError) { %>
+            <p class="error-text"><%= createError %></p>
+        <% } %>
+
+        <form action="/whispersphere/room/create" method="post" class="form">
+            <div class="create-form">
+                <input type="password" name="password" placeholder="Enter Password" class="text-input">
+                <input type="submit" name="submit" value="Create" class="btn">
+            </div>
+            
+        </form>
+    </div>
+
+</div>
+
+<%- include("./partials/footer") %>
