@@ -13,11 +13,12 @@ const methodOverride = require("method-override")
 i18n.configure({
     locales: ['en', 'de'],
     defaultLocale: 'en',
-    directory: __dirname + '/Portfolio/locales',
+    directory: __dirname + '/locales',
   });
 
 const app = express()
 app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
 app.set('trust proxy', 1);
 
 app.use(express.json());
@@ -33,40 +34,20 @@ app.use(cookieSession({
   maxAge: 24 * 60 * 60 * 1000 // 24 hours
 }))
 
-const folders = [
-  {
-      folderName: '',
-      viewsPath: path.join(__dirname, 'Portfolio', 'views')
-  },
-  {
-    folderName: 'whispersphere',
-    viewsPath: path.join(__dirname, 'WhisperSphere', 'views')
-  },
-  {
-    folderName: 'mybrary',
-    viewsPath: path.join(__dirname, 'Mybrary', 'views')
-  },
-  {
-    folderName: 'blog-api'
-  }
-];
+
 // Middleware-Funktion, um die richtigen Pfade basierend auf dem angeforderten Ordner zu setzen
 app.use((req, res, next) => {
-  const requestedFolder = req.originalUrl.split('/')[1]; // Erhalte den Namen des angeforderten Ordners aus der URL
-  const folder = folders.find(folder => folder.folderName === requestedFolder); // Finde den passenden Ordner
-  if (folder) {
-      app.set('views', folder.viewsPath);
-      req.test = folder.folderName
-    }
-    next();
-  });
+  const application = req.originalUrl.split('/')[1]; // Erhalte den Namen des angeforderten Ordners aus der URL
+  if (application) req.application = application
+  next();
+});
 
 // Datebase
 app.use(require("./model/db").connectDB) // Connect to the Database
 app.use(require("./model/db").disconnectDB) // Disconnects from DB after res send
 
 // Authentication
-require('./WhisperSphere/middleware/passport');
+require('./Middleware/WhisperSphere/passport');
 app.use(passport.initialize())
 app.use(passport.session())
 
@@ -106,36 +87,36 @@ app.use(
   );
 
 // use ether a IP limter (in Production), or use morgan logging
-if (process.env.NODE_ENV === 'production') app.use(require("./WhisperSphere/middleware/limiter"));
+if (process.env.NODE_ENV === 'production') app.use(require("./Middleware/WhisperSphere//limiter"));
   else app.use(morgan('dev'))
 
 // Whispersphere
-app.use("/whispersphere", require("./WhisperSphere/routes/index"))
-app.use("/whispersphere/auth", require("./WhisperSphere/routes/auth"))
-app.use("/whispersphere/room", require("./WhisperSphere/routes/room"))
+app.use("/whispersphere", require("./routes/WhisperSphere/index"))
+app.use("/whispersphere/auth", require("./routes/WhisperSphere/auth"))
+app.use("/whispersphere/room", require("./routes/WhisperSphere/room"))
 
 // Blog API
-app.use("/blog-api/blog/", require("./Blog_api/routes/blog"))
-app.use("/blog-api/auth", require("./Blog_api/routes/auth"))
-app.use("/blog-api/search", require("./Blog_api/routes/search"))
-app.use("/blog-api/comment", require("./Blog_api/routes/comment"))
+app.use("/blog-api/blog/", require("./routes/Blog_api/blog"))
+app.use("/blog-api/auth", require("./routes/Blog_api/auth"))
+app.use("/blog-api/search", require("./routes/Blog_api/search"))
+app.use("/blog-api/comment", require("./routes/Blog_api/comment"))
 
 
 // Mybrary
-app.use("/mybrary", require("./Mybrary/routes/index"))
-app.use("/mybrary/authors", require("./Mybrary/routes/author"))
-app.use("/mybrary/books", require("./Mybrary/routes/books"))
+app.use("/mybrary", require("./routes/Mybrary/index"))
+app.use("/mybrary/authors", require("./routes/Mybrary/author"))
+app.use("/mybrary/books", require("./routes/Mybrary/books"))
 
 // Portfolio website
-app.use("/setlanguage", require("./Portfolio/routes/language"));
-app.use("/contact", require("./Portfolio/routes/contact"));
-app.use("/resume", require("./Portfolio/routes/resume"));
-app.use("/portfolio", require("./Portfolio/routes/portfolio"));
-app.use("/skills", require("./Portfolio/routes/skills"));
-app.use("/", require("./Portfolio/routes/index"));
+app.use("/setlanguage", require("./routes/Portfolio/language"));
+app.use("/contact", require("./routes/Portfolio/contact"));
+app.use("/resume", require("./routes/Portfolio/resume"));
+app.use("/portfolio", require("./routes/Portfolio/portfolio"));
+app.use("/skills", require("./routes/Portfolio/skills"));
+app.use("/", require("./routes/Portfolio/index"));
 
 // use error handler
-app.use(require("./errorHandler"))
+app.use(require("./Middleware/errorHandler"))
 
 app.listen(process.env.PORT, () => {
     console.log(`Server is Listening.`);

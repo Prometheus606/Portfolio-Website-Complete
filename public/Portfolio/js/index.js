@@ -17,7 +17,10 @@ function getPreferredLanguage() {
 if (!getPreferredLanguage()) toggleLanguage("en");
   
 // Funktion zum Ändern der Sprache durch Klick auf den Button
+document.getElementById("language-button-de").addEventListener("click", () => {toggleLanguage("de")});
+document.getElementById("language-button-en").addEventListener("click", () => {toggleLanguage("en")});
 async function toggleLanguage(language) {
+    console.log("hi");
     setPreferredLanguage(language);
 
     await fetch('/setlanguage', { 
