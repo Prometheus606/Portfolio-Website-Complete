@@ -269,7 +269,7 @@ img {
     position: fixed;
     top: 0;
     right: 0;
-    height: 93vh;
+    height: 85vh;
     width: 38%;
     background-color: var(--body-color);
     padding: 2rem 1.5rem 4rem;
@@ -284,6 +284,7 @@ img {
 .nav__list {
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
+  
 }
 .nav__link {
   display: flex;
@@ -869,14 +870,16 @@ img
 /* For small devices */
 @media screen and (max-width: 767px) {
   .nav__list {
-    /* column-gap: 0; */
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     position: relative;
     left: .5rem;
     top: 1rem;
-    width: 50%;
-    align-items: center;
+    max-width: 100%;
+    max-height: 110%;
+    overflow-y: auto;
 
   }
 
@@ -913,6 +916,7 @@ img
     top: 1rem;
     width: 50%;
     align-items: center;
+    overflow-y: visible;
 
   }
 

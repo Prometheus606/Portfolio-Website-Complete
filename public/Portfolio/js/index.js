@@ -19,6 +19,8 @@ if (!getPreferredLanguage()) toggleLanguage("en");
 // Funktion zum Ändern der Sprache durch Klick auf den Button
 document.getElementById("language-button-de").addEventListener("click", () => {toggleLanguage("de")});
 document.getElementById("language-button-en").addEventListener("click", () => {toggleLanguage("en")});
+document.getElementById("language-button-de-1").addEventListener("click", () => {toggleLanguage("de")});
+document.getElementById("language-button-en-1").addEventListener("click", () => {toggleLanguage("en")});
 async function toggleLanguage(language) {
     console.log("hi");
     setPreferredLanguage(language);
@@ -50,10 +52,11 @@ if (navToggle) {
 
 /*===== MENU HIDDEN =====*/
 /* Validate if constant exists */
-if (navClose) {
-  navClose.addEventListener("click", () => {
-    navMenu.classList.remove("show-menu");
-  });
+document.getElementById("main").addEventListener("click", () => {hideNavMenu()});
+if (navClose) {navClose.addEventListener("click", () => {hideNavMenu()});}
+
+function hideNavMenu() {
+  navMenu.classList.remove("show-menu");
 }
 
 /*==================== REMOVE MENU MOBILE ====================*/

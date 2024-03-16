@@ -38,7 +38,7 @@
 @media (max-width: 720px) {
     .form-container {
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
-        margin: 5vh auto;
+        margin: 1vh auto;
+        gap: 2rem;
     }
 }

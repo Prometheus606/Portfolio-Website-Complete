@@ -100,7 +100,6 @@ router.post("/", async (req, res) => {
 
     try {
         const encryptedMessage = CryptoJS.AES.encrypt(message, process.env.MESSAGE_SECRET).toString();
-        
         await db.query("INSERT INTO whisper_sphere_messages (room_id, message, username) VALUES ($1, $2, $3)", [roomID, encryptedMessage, userName])
 
         res.redirect(`/whispersphere/room/${roomID}`)

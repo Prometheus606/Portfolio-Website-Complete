@@ -41,7 +41,7 @@ const connectDB = async (req, res, next) => {
         // create global chat if not exists (12345)
         const globalCredentials = parseInt(process.env.GLOBAL_CREDENTIALS)
         const result = await db.query("SELECT * FROM whisper_sphere_rooms WHERE id=$1", [globalCredentials])
-        if (result.rows == 0) {
+        if (result.rows.length == 0) {
             const passwordHash = await bcrypt.hash(globalCredentials.toString(), 10)
             await db.query("INSERT INTO whisper_sphere_rooms (id, password) VALUES ($1, $2)", [globalCredentials, passwordHash])
         }
