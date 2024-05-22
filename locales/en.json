@@ -70,18 +70,21 @@
                     "title": "Whisper Sphere",
                     "description": "Anonymous chat rooms with state-of-the-art encryption to facilitate confidential and secure real-time communication.",
                     "image": "/Portfolio/images/whisperSphere.png",
+                    "frameworks": "Express.js, PostgreSQL, Encryption",
                     "buttonAction": "/whispersphere/"
                 },
                 {
                     "title": "Blog API",
                     "description": "My Blog API streamlines blog post creation, management, and commenting. Securely stored on the server, your changes ensure seamless access to your blog content from anywhere.",
                     "image": "/Portfolio/images/blogAPI.jpeg",
+                    "frameworks": "Express.js, PostgreSQL",
                     "buttonAction": "https://documenter.getpostman.com/view/33503313/2sA2xiVWh5"
                 },
                 {
                     "title": "Mybrary",
                     "description": "Explore and organize your personal library with MyBrary, a user-friendly book database. Easily catalog, search, and manage your collection, all within MyBrary's intuitive interface",
                     "image": "/Portfolio/images/mybrary.png",
+                    "frameworks": "Express.js, PostgreSQL",
                     "buttonAction": "/mybrary/"
                 }
             ]

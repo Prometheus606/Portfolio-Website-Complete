@@ -57,7 +57,8 @@ app.use(passport.session())
 const scriptSources = [
   "'self'",
   "blob:",
-  "https://unpkg.com"
+  "https://unpkg.com",
+  "https://cdnjs.cloudflare.com"
 ];
 
 const styleSources = [
