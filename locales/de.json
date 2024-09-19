@@ -7,7 +7,7 @@
     "pages": {
         "home": {
             "title": "Über mich",
-            "aboutText": "Willkommen auf meiner Website! Ich bin Niklas, ein gelernter Zerspanungsmechaniker mit einer Leidenschaft für Technik und Innovation. Aktuell arbeite ich als Entwickler für NX CAM Postprozessoren und beschäftige mich in meiner Freizeit intensiv mit der Backend-Entwicklung. Meine Expertise liegt in der Fullstack-Entwicklung, mit Fokus auf Backend-Systemen. Mein Technologie-Stack umfasst JavaScript mit Node.js, Python mit Flask, SQL, PostgreSQL und Git. Zusätzlich entwickle ich gerne Automatisierungslösungen mit Python oder JavaScript, um Arbeitsabläufe zu vereinfachen. Zum Beispiel habe ich eine VSCode-Erweiterung erstellt, die Syntax-Hervorhebung, Autovervollständigung, Snippets und vieles mehr bietet, um effizient Postprozessoren zu entwickeln. Wenn Sie mich kontaktieren möchten, nutzen Sie gerne mein Kontaktformular. Ich freue mich immer darauf, zu kooperieren und spannende Projekte zu besprechen!",      
+            "aboutText": "Hi! Ich bin Niklas. Ich bin gelernter Zerspanungsmechaniker, entwickle aktuell beruflich Postprozessoren für NX CAM und beschäftige mich in meiner Freizeit intensiv mit der Software-Entwicklung. Dabei liegt mein Focus auf der Backend Entwicklung. Zusätzlich entwickle ich gerne Automatisierungslösungen mit Python oder Javascript, um meine Arbeitsabläufe zu optimieren. Mein Technologie-Stack umfasst JavaScript mit Node.js, Python mit Flask, TCL, SQL, PostgreSQL und Git. Zudem bin ich in der Lage komplette Websites inklusive Frontend zu erstellen und zu deployen. Wirf gerne einen Blick in meine letzten Projekte oder setze dich über mein Kontaktformular mit mir in Verbindung. Viel Spaß!",      
             "experience_text1": "Jahre",
             "experience_text2": "erfahrung",
             "certifications_text1": "Zertifizierungen",
@@ -94,7 +94,7 @@
             "subtitle": "My technical level",
             "tree": [
                 {
-                    "title": "Web Entwickler",
+                    "title": "Web Entwicklung",
                     "subtitle": "Über 2 Jahre",
                     "icon": "uil-server-connection",
                     "skill": [
@@ -117,7 +117,7 @@
                     ]
                 },
                 {
-                    "title": "Postprocessor Entwickler",
+                    "title": "Postprocessor Entwicklung",
                     "subtitle": "1 Jahr",
                     "icon": "uil-brackets-curly",
                     "skill": [
@@ -136,7 +136,7 @@
                     ]
                 },
                 {
-                    "title": "Zerspanungsmechaniker",
+                    "title": "Zerspanung",
                     "subtitle": "8 Jahre",
                     "icon": "uil-building",
                     "skill": [

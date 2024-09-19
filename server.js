@@ -31,7 +31,7 @@ app.use(cookieParser())
 app.use(cookieSession({
   name: 'session',
   keys: [process.env.SESSION_SECRET],
-  maxAge: 24 * 60 * 60 * 1000 // 24 hours
+  maxAge: 60 * 24 * 60 * 60 * 1000 // 24 hours
 }))
 
 

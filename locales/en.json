@@ -7,7 +7,7 @@
 	"pages": {
 		"home": {
 			"title": "About me",
-			"aboutText": "Welcome to my website! I'm Niklas, a trained machining mechanic with a passion for technology and innovation. Currently, I work as a developer for NX CAM postprocessors and dedicate my free time to intensive backend development. My expertise lies in full-stack development, focusing on backend systems. My technology stack includes JavaScript with Node.js, Python with Flask, SQL, PostgreSQL, and Git. Additionally, I enjoy developing automation solutions with Python or JavaScript to streamline workflows. For instance, I've created a VSCode extension that provides syntax highlighting, autocompletion, snippets, and more to efficiently develop postprocessors. If you'd like to get in touch, feel free to use my contact form. I'm always eager to collaborate and discuss exciting projects!",
+			"aboutText": "Hi, my name is Niklas. I'm a trained cutting machine operator, currently develop postprocessors for NX CAM professionally and in my spare time I'm intensively involved in software development. My focus is on backend development. I also like to develop automation solutions with Python or JavaScript to optimize my workflows. My technology stack includes JavaScript with Node.js, Python with Flask, TCL, SQL, PostgreSQL and Git. I am also able to create and deploy complete websites including frontend. Take a look at my latest projects or get in touch with me via my contact form. Have fun!",
             "experience_text1": "Years",
             "experience_text2": "experience",
             "certifications_text1": "Completed",
@@ -95,7 +95,7 @@
             "subtitle": "My technical level",
             "tree": [
                 {
-                    "title": "Web Developer",
+                    "title": "Web Development",
                     "subtitle": "More than 2 years",
                     "icon": "uil-server-connection",
                     "skill": [
@@ -118,7 +118,7 @@
                     ]
                 },
                 {
-                    "title": "Postprocessor Developer",
+                    "title": "Postprocessor Development",
                     "subtitle": "1 year",
                     "icon": "uil-brackets-curly",
                     "skill": [
@@ -137,7 +137,7 @@
                     ]
                 },
                 {
-                    "title": "Cutting Machine Operator",
+                    "title": "Cutting Machine Operating",
                     "subtitle": "8 years",
                     "icon": "uil-building",
                     "skill": [
